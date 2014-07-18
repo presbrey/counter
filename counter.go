@@ -24,7 +24,7 @@ func init() {
 }
 
 func main() {
-	log.Fatalln((http.Server{
+	log.Fatalln((&http.Server{
 		Addr: *addr,
 		Handler: http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
 			x := atomic.AddUint64(&N, 1)
